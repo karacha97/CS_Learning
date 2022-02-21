@@ -35,9 +35,12 @@ Linux文件和文件夹的权限分三个：read、write、execute
 `rwx`表示：r-read，w-write，x-execute
 ### 改变文件属性与权限
 - chgrp改变文件所属用户组
+
 `chgrp [-R] groupname filename`
 -r表示递归
+
 groupname必须在/etc/group内，否则会报错
+
 - chown改变文件所属用户
 `chown [-R] owner filename`
 ```
@@ -45,11 +48,15 @@ groupname必须在/etc/group内，否则会报错
 ```
 - chmod改变文件权限
 owner group others三个不同用户组，分别对应着一组权限
-修改权限的方式有两种，可以通过字符也可以通过数字
-rwx三个字符对应三个不同的值
+修改权限的方式有两种
+
+- 可以通过字符
+- 也可以通过数字
+- rwx三个字符对应三个不同的值
   - r:4
   - w:2
   - x:1
+ 
 e.g.`owner=rwx=4+2+1=7`
 
 
